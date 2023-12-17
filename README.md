@@ -29,10 +29,10 @@ If you want to control your Python environments with a Graphical User Interface,
 
 ## Assets
 
-The assests folder contains all the JSON files, images and videos that are needed to play the game.
+The assets folder contains all the JSON files, images and videos that are needed to play the game.
 
 - You can use the _default_ assets as a starting point. Fill in answers, add videos, images, etc.
-- On [this location](https://drive.google.com/drive/folders/12WWNlmYh9vjv9atfELKr7bAB-YRkfpPX?usp=drive_link) you can find some open sourced questions and assets. You can use this as a reference. **Please note that you need to create own videos for the "Open Deur" round.**
+- On [this location](https://drive.google.com/drive/folders/12WWNlmYh9vjv9atfELKr7bAB-YRkfpPX?usp=drive_link) you can find some open sourced questions and assets. **Please note that you need to create own videos for the "Open Deur" round.**
 
 ## Start The Game
 
