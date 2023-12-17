@@ -13,8 +13,8 @@ Make sure you have installed Python. You can use your native install Python vers
 
 #### Create a new Conda environment
 
-- In case of Conda, make a new environment for dsmtw: 'conda create -n dsmtw python=3.11'
-- Open up your environment by: 'conda activate dsmtw'
+- In case of Conda, make a new environment for dsmtw: `conda create -n dsmtw python=3.11`
+- Open up your environment by: `conda activate dsmtw`
 
 _Note: Python 3.11 has been successfully tested_
 
