@@ -20,7 +20,7 @@ _Note: Python 3.11 has been successfully tested_
 
 ### Anaconda Navigator
 
-If you want to control your Python environments with a Graphical User Interface, use: [Anaconda Navivator](https://docs.anaconda.com/free/navigator/index.html)
+If you want to control your Python environments with a Graphical User Interface, use: [Anaconda Navigator](https://docs.anaconda.com/free/navigator/index.html)
 
 ## Installation
 
@@ -36,4 +36,4 @@ The assests folder contains all the JSON files, images and videos that are neede
 
 ## Start The Game
 
-Open up the application by: `python3 dsmtw.py listen [PATH OF QUESTIONS] [LIST OF PLAYERS]`. If you want to open up the default questions, this command should work: `python3 dsmtw.py listen "./default" "Tim,Willy,René"`
+Open up the application by: `python3 dsmtw.py listen [PATH OF QUESTIONS] [LIST OF PLAYERS]`. If you want to open up the default questions, this command should work: `python3 dsmtw.py listen "./default" "Alfred,Marie,Carla"`
