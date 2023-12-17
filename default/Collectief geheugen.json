@@ -1,0 +1,35 @@
+[
+  {
+    "image": "collectief-geheugen-1.jpg",
+    "answers": [
+      "CG1 - Answer 1",
+      "CG1 - Answer 2",
+      "CG1 - Answer 3",
+      "CG1 - Answer 4",
+      "CG1 - Answer 5"
+    ],
+    "video": "collectief-geheugen-1.mp4"
+  },
+  {
+    "image": "collectief-geheugen-2.jpg",
+    "answers": [
+      "CG2 - Answer 1",
+      "CG2 - Answer 2",
+      "CG2 - Answer 3",
+      "CG2 - Answer 4",
+      "CG2 - Answer 5"
+    ],
+    "video": "collectief-geheugen-2.mp4"
+  },
+  {
+    "image": "collectief-geheugen-3.jpg",
+    "answers": [
+      "CG3 - Answer 1",
+      "CG3 - Answer 2",
+      "CG3 - Answer 3",
+      "CG3 - Answer 4",
+      "CG3 - Answer 5"
+    ],
+    "video": "collectief-geheugen-3.mp4"
+  }
+]

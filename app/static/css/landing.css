@@ -1,0 +1,24 @@
+#title {
+	font-size: 250%;
+}
+
+#title, #attribution {
+	position: relative;
+
+	z-index: 4;
+}
+
+#halo {
+	position: absolute;
+	width: 20%;
+	height: auto;
+
+	top: -20%;
+    left: 50%;
+
+    opacity: 1;
+
+	z-index: 3;
+
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,12 @@
+.OpenDeur img {
+	width: 100%;
+	height: auto;
+}
+
+.questioneer {
+	cursor: pointer;
+}
+
+.questioneer.chosen {
+	opacity: 0.6;
+}

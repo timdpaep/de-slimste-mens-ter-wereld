@@ -1,0 +1,397 @@
+@font-face
+{
+	font-family: dsmtw;
+	src: url('../fonts/dsmtw.ttf');
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(359deg);}
+}
+
+/* General stuff */
+
+html, body
+{
+	margin: 0;
+	
+	width: 100%;
+	height: 100%;
+
+	overflow-x: hidden;
+	overflow-y: hidden;
+
+	font-family: "dsmtw";
+
+	color: rgba(255, 255, 255, 0.87);
+}
+
+body {
+	background-image: url('../img/bg_img_large_4x.png');
+	background-size: cover;
+}
+
+a
+{
+	color: rgba(255, 255, 255, 0.87);;
+}
+
+input
+{
+    margin: 1em;
+    margin-top: 0;
+
+    outline: none;
+    -webkit-appearance: none;
+    tap-highlight-color: rgba(255, 255, 255, 0);
+    font-size: 1em;
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    color: rgba(0, 0, 0, 0.85);
+    border-radius: 0.2rem;
+    box-shadow: 0em 0em 0em 0em transparent inset;
+    -webkit-transition: color 0.1s ease, border-color 0.1s ease;
+    transition: color 0.1s ease, border-color 0.1s ease;
+
+    background: #fff6f6;
+	border-color: #e0b4b4;
+	color: #9f3a38;
+	border-radius: '';
+	box-shadow: none;
+
+	width: 80%;
+	vertical-align: top;
+
+	padding-left: 5px;
+
+	font-family: 'dsmtw';
+}
+
+button, a.button
+{
+	cursor: pointer;
+    display: inline-block;
+    min-height: 1em;
+    outline: none;
+    border: none;
+    vertical-align: baseline;
+	background-color: #ffa930;
+    color: #ffffff;
+    text-shadow: none;
+    background-image: none;
+    font-family: 'dsmtw';
+    margin: 0.25em 0.25em 0.25em 0.25em;
+    padding: 0.55em 1.5em 0.55em;
+    text-transform: none;
+    text-shadow: none;
+    font-weight: normal;
+    line-height: 1em;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.2rem;
+    box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+    transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+
+    font-size: 1.15rem;
+}
+
+button.float {
+	position: fixed;
+
+	right: 1em;
+	bottom: 1em;
+
+	display: none;
+}
+
+/* Lay-out */
+
+.container-fluid {
+	height: 100%;
+}
+
+.row.full {
+	height: 100%;
+}
+
+.round {
+	display: none;
+}
+
+.round.current {
+	display: block;
+}
+
+.auxiliaryMedia img {
+	width: 100%;
+	height: auto;
+
+	display: inline-block;
+}
+
+.scores {
+	display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+    gap: 3vh;
+}
+
+/* Circle rendering */
+
+.circlebox
+{
+	position: relative;
+}
+
+.circlebox.small
+{
+	display: inline-block;
+}
+
+.circle
+{
+	position: relative;
+	z-index: -6;
+
+	min-width: 20px;
+  	min-height: 20px;
+	border-radius: 50%;
+
+	overflow: hidden;
+	margin: 0.5em;
+
+	background-color: #be2e0e;
+	color: #ffffff;
+
+	font-size: 2em;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-position: -5px -7px;
+	background-size: 115% 115%;
+
+	outline: none;
+}
+
+.circle:before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	padding-top: 100%;
+	height: 0;
+}
+
+.circle.small
+{
+	display: inline-flex;
+
+	width: 4vw;
+	height: 4vw;
+
+	vertical-align: bottom;
+
+	font-size: 3vw;
+
+	margin: 1vw;
+
+	background-position: -5px -3px;
+}
+
+.circle.small.transparent, .circle.small.transparent .background
+{
+	background: none;
+}
+
+.circle.small.transparent.turn
+{
+	background-color: #be2e0e;
+
+	z-index: -6;
+}
+
+.circle.turn .score
+{
+	color: #ffa930;
+}
+
+.circle .score {
+	font-size: 4vw;
+}
+
+.circle.small .score {
+	font-size: 3vw;
+}
+
+.circle .background, .circle.small.transparent.turn .background
+{
+	background-image: url('../img/dsm_circle_l_uni_spin_trans.png');
+	/*background-position: -5px -7px;*/
+	background-size: 105% 105%;
+
+	z-index: -5;
+
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+
+	animation: spin 60s infinite;
+	animation-play-state: paused;
+}
+
+.circle.spin .background, .circle.small.transparent.turn .background
+{
+	animation-play-state: running;
+}
+
+.circle.small.raised
+{
+	margin-bottom: 2vw;
+}
+
+.circlebox .name
+{
+	position: absolute;
+	
+	font-size: 2vw;
+
+	top: -1vw;
+
+	width: 100%;
+}
+
+.circlebox.small .name
+{
+	top: 2px;
+	font-size: 20px;
+}
+
+/* Questions etc */
+
+.question
+{
+	font-size: 3vw;
+}
+
+.answers
+{
+	text-align: left;
+}
+
+.answer
+{
+	font-size: 2vw;
+	cursor: pointer;
+}
+
+.answer .text.found {
+	text-decoration: line-through;
+}
+
+.answer .score
+{
+	display: inline-block;
+	width: 5vw;
+	visibility: hidden;
+
+	color: #ffa930;
+
+	text-align: center;
+}
+
+.answer .score.found {
+	visibility: visible;
+}
+
+.game table {
+	font-size: 2vw;
+}
+
+/* Bootstrap resets */
+.game p {
+	margin: 0;
+	padding: 0;
+}
+
+/* Unadvanced logic */
+.unadvanced button.float {
+	display: block;
+}
+
+.unadvanced .controls {
+	visibility: hidden;
+}
+
+/* Clock UI */
+.clocktoggle {
+	display: none;
+}
+
+.clocktogglevisible .clocktoggle {
+	display: inline-block;
+}
+
+/* Player logic */
+.client .host {
+	display: none !important;
+}
+
+.client .answer {
+	cursor: default;
+	pointer-events: none;
+	user-select: none;
+}
+
+.client .answer .blurry {
+	color: transparent;
+   	text-shadow: 0 0 25px rgba(0,0,0,0.9);
+}
+
+/* Video UI */
+#auxiliaryMedia_video {
+	position: absolute;
+
+	width: 100%;
+	height: 100%;
+
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/* Bumper */
+#bumper {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+    justify-items: center;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+
+	text-align: center;
+}
+
+#bumper h1 {
+	font-size: 10vw;
+}
+
+#bumper.small h1
+{
+	font-size: 6vw;
+}

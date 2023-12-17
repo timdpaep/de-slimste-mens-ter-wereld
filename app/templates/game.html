@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block content %}
+	{% if host %}
+		{% include "host.html" %}
+	{% else %}
+		{% include "player.html" %}
+	{% endif %}
+	<div id="bumper" class="d-none">
+		<h1 id="bumper_text">Wie dit leest, is zot</h1>
+	</div>
+	<div class="container-fluid {% if not host %}client{% endif %}">
+		<div class="host" style="position: fixed; top: 0; top: 0; left: 0; right: 0;">
+			<button onclick="javascript:dsmtw.advanceRound();">Advance round</button>
+			<button onclick="javascript:dsmtw.correct();">Correct</button>
+			<button onclick="javascript:dsmtw.pass();">Pass</button>
+			<button onclick="javascript:dsmtw.clockStart();">Clock start</button>
+			<button onclick="javascript:dsmtw.clockStop();">Clock stop</button>
+			<h1 id="currentround" style="display: inline-block;">current round</h1>
+		</div>
+		<button class="float host" onclick="javascript:dsmtw.releaseAdvance();">></button>
+		<div class="row full top align-items-center justify-content-center text-center">
+			<!-- Scores will go here -->
+			<div class="col-2" style="max-width: 350px;">
+				<div class="scores" id="scores">
+					<!-- Score badges will be generated automatically -->
+				</div>
+				<div>
+					<button class="clocktoggle host"
+							onclick="javascript:dsmtw.clockToggle();"
+							id="button_clock_toggle">Start klok</button>
+				</div>
+			</div>
+			<!-- Actual game content will go here -->
+			<div class="col-10 game">
+				<div id="container_auxiliaryMedia" class="row justify-content-center pb-4 auxiliaryMedia">
+					<div class="col-6 text-center">
+						<img id="auxiliaryMedia">
+					</div>
+				</div>
+				<div id="round_start" class="round">
+					<button onclick="javascript:dsmtw.startGame();" class="host">Start het spel</button>
+				</div>
+				{% include "rounds/369.html" %}
+				{% include "rounds/OpenDeur.html" %}
+				{% include "rounds/Puzzel.html" %}
+				{% include "rounds/Galerij.html" %}
+				{% include "rounds/CollectiefGeheugen.html" %}
+				{% include "rounds/Finale.html" %}
+			</div>
+		</div>
+	</div>
+	<video id="auxiliaryMedia_video" class="d-none"></video>
+	<audio id="snd_bumper">
+  		<source src="/static/sounds/bumper.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="snd_correct">
+  		<source src="/static/sounds/correct.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="snd_clock">
+  		<source src="/static/sounds/clock.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="snd_clock_end">
+  		<source src="/static/sounds/clock_end.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="snd_intro">
+  		<source src="/static/sounds/intro.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="snd_finale">
+  		<source src="/static/sounds/finale.mp3" type="audio/mpeg">
+	</audio>
+{% endblock %}

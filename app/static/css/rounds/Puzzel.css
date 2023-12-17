@@ -1,0 +1,45 @@
+#round_Puzzel_puzzle_table {
+	/*display: inline-block;*/
+
+	background-color: rgba(0, 0, 0, 0.05);
+	box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.05);
+
+	border-radius: 0.2rem;
+
+	border-collapse: separate;
+	border-spacing: 0.5rem;
+
+	width: 100%;
+}
+
+#round_Puzzel_puzzle_table tr
+{
+	height: 5vh;
+}
+
+#round_Puzzel_puzzle_table td
+{
+	background-color: #be2e0e;
+
+	border-radius: 2px;
+
+	padding: 2vh;
+
+	width: 8vw;
+	height: 3vw;
+}
+
+.teal
+{
+	color: #38bdb2;
+}
+
+.yellow
+{
+	color: #fdb86a;
+}
+
+.green
+{
+	color: #4be228;
+}

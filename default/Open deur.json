@@ -1,0 +1,35 @@
+[
+  {
+    "image": "open-deur-1.png",
+    "question": "OD1 - Question?",
+    "answers": [
+      "OD1 - Answer 1",
+      "OD1 - Answer 2",
+      "OD1 - Answer 3",
+      "OD1 - Answer 4"
+    ],
+    "video": "open-deur-1.mp4"
+  },
+  {
+    "image": "open-deur-2.png",
+    "question": "OD2 - Question?",
+    "answers": [
+      "OD2 - Answer 1",
+      "OD2 - Answer 2",
+      "OD2 - Answer 3",
+      "OD2 - Answer 4"
+    ],
+    "video": "open-deur-2.mp4"
+  },
+  {
+    "image": "open-deur-3.png",
+    "question": "OD3 - Question?",
+    "answers": [
+      "OD3 - Answer 1",
+      "OD3 - Answer 2",
+      "OD3 - Answer 3",
+      "OD3 - Answer 4"
+    ],
+    "video": "open-deur-3.mp4"
+  }
+]
